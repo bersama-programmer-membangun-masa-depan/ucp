@@ -10,7 +10,7 @@
                 <button data-button="kembali-pamer">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
-                <h3 class="judul">${lang.title} | Ucapin</h3>
+                <h3 class="judul">${lang.title} | Blogandre</h3>
                 <button data-button="bikin-pamerin">
                     <i class="fa-solid fa-plus"></i>
                 </button>

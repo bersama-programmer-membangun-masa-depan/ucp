@@ -4,7 +4,7 @@ const container = document.querySelector(".container");
         const a = Bahasa[bahasa].landing
           , e = document.createElement("main");
         e.classList.add("Landing"),
-        e.innerHTML = `\n            <h1>UCAPIN</h1>\n            <button data-button="email-cancel" class="kembali"><i class="fa-solid fa-chevron-left"></i></button>\n            <label for="email_login_input"><h2>${a.email}</h2></label>\n            <input data-input="email-login" type="email" name="email_login_input" id="email_login_input" placeholder="${a.emailPlaceholder}"/>\n        `;
+        e.innerHTML = `\n            <h1>Blogandre</h1>\n            <button data-button="email-cancel" class="kembali"><i class="fa-solid fa-chevron-left"></i></button>\n            <label for="email_login_input"><h2>${a.email}</h2></label>\n            <input data-input="email-login" type="email" name="email_login_input" id="email_login_input" placeholder="${a.emailPlaceholder}"/>\n        `;
         const o = e.querySelector('[data-input="email-login"]')
           , t = document.createElement("button");
         t.classList.add("kecil"),
@@ -31,12 +31,12 @@ const container = document.querySelector(".container");
                 handleCodeInApp: !0
             };
             firebase.auth().sendSignInLinkToEmail(i, o).then(()=>{
-                window.localStorage.setItem("ucapinEmailSignIn", i),
+                window.localStorage.setItem("BlogandreEmailSignIn", i),
                 Notipin.Alert({
                     msg: a.successLine1,
                     type: "blue"
                 }),
-                e.innerHTML = `\n                    <h1>UCAPIN</h1>\n                    <i><b>${a.successLine1}</b></i>\n                    <i><b>${a.successLine2}</b></i>\n                `
+                e.innerHTML = `\n                    <h1>Blogandre</h1>\n                    <i><b>${a.successLine1}</b></i>\n                    <i><b>${a.successLine2}</b></i>\n                `
             }
             ).catch(i=>{
                 Notipin.Alert({
@@ -52,7 +52,7 @@ const container = document.querySelector(".container");
         const a = Bahasa[bahasa].landing
           , e = document.createElement("main");
         e.classList.add("Landing"),
-        e.innerHTML = `\n            <h1 class="judul">UCAPIN</h1>\n            <select name="bahasa" data-option="bahasa">\n                <option value="">Language</option>\n                <option value="indonesia">Bahasa Indonesia</option>\n                <option value="english">English</option>\n            </select>\n            <p class="deskripsi">${a.desc}</p>\n            <button class="google" data-button="login-google"><i class="fa-brands fa-google"></i> ${a.google}</button>\n                        <button class="email" data-button="login-email"><i class="fa-regular fa-envelope"></i> ${a.email}</button>\n        `,
+        e.innerHTML = `\n            <h1 class="judul">Blogandre</h1>\n            <select name="bahasa" data-option="bahasa">\n                <option value="">Language</option>\n                <option value="indonesia">Bahasa Indonesia</option>\n                <option value="english">English</option>\n            </select>\n            <p class="deskripsi">${a.desc}</p>\n            <button class="google" data-button="login-google"><i class="fa-brands fa-google"></i> ${a.google}</button>\n                        <button class="email" data-button="login-email"><i class="fa-regular fa-envelope"></i> ${a.email}</button>\n        `,
         container.innerHTML = "",
         container.appendChild(e);
         const o = e.querySelector('[data-option="bahasa"]');
@@ -76,7 +76,7 @@ const container = document.querySelector(".container");
     ;
     if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
         const n = Bahasa[bahasa].landing;
-        let i = window.localStorage.getItem("ucapinEmailSignIn");
+        let i = window.localStorage.getItem("BlogandreEmailSignIn");
         i || Notipin.Prompt({
             msg: n.emailConfirm,
             onYes: i=>{
@@ -98,8 +98,8 @@ const container = document.querySelector(".container");
             type: "info"
         }),
         firebase.auth().signInWithEmailLink(i, window.location.href).then(()=>{
-            let n = window.localStorage.getItem("ucapinEmailSignIn");
-            n && window.localStorage.removeItem("ucapinEmailSignIn"),
+            let n = window.localStorage.getItem("BlogandreEmailSignIn");
+            n && window.localStorage.removeItem("BlogandreEmailSignIn"),
             window.location.href = `${window.location.origin}/meja/`
         }
         ).catch(i=>{

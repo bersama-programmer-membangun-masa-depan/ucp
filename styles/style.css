@@ -16,7 +16,7 @@ body {
 .main .cards {
   position: absolute;
   z-index: -2;
-  background: url(../images/cards.png) no-repeat;
+  background: url(-) no-repeat;
   background-size: cover;
   background-position: center;
   width: 275px;

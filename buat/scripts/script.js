@@ -21,7 +21,7 @@
             <button data-button="kembali-bikin">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
-            <h3 class="judul">${lang.act} | Ucapin</h3>
+            <h3 class="judul">${lang.act} | Blogandre</h3>
         </header>
         <main class="main">
             <div class="form">
@@ -170,7 +170,7 @@
             <button class="close" data-button="close">
                 <i class="fa-duotone fa-circle-chevron-left"></i>
                 </button>
-            <h1 class="judul">UCAPIN</h1>
+            <h1 class="judul">Blogandre</h1>
             <h3 class="deskripsi">${lang.doneCreation}</h3>
             <div class="tombolan">
                 <input data-input="link-value" type="text" value="${fullURL}" readonly="readonly"/>

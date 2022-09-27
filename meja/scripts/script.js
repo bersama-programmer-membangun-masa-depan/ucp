@@ -7,7 +7,7 @@
         element.classList.add("Dashboard");
         element.innerHTML = (`
             <header class="header">
-                <h1 class="judul">UCAPIN</h1>
+                <h1 class="judul">Blogandre</h1>
                 <select name="bahasa" data-option="bahasa">
                     <option value="">Lang</option>
                     <option value="indonesia">ID</option>
